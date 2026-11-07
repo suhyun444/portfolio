@@ -246,6 +246,27 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
 /* ---------- tech stack ---------- */
 .stack .callout { height: 100%; }
 
+/* ---------- 이력 · 업무경험 · 수상경력 · 자격증 ---------- */
+/* 왼쪽: 이력 → 자격증, 오른쪽: 업무경험 → 수상경력(아래 끝을 자격증과 맞춤) */
+.history-grid {
+  display: grid;
+  grid-template-columns: 43.75fr 56.25fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 32px;
+}
+.hist-main { grid-column: 1; grid-row: 1; }
+.hist-cert { grid-column: 1; grid-row: 2; align-self: start; }
+.hist-side {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+}
+.hist-awards { margin-top: auto; }
+.history-grid h3 { margin-top: 0; }
+.hist-cert h3, .hist-awards h3 { margin-top: 36px; }
+.history-grid ul { margin-bottom: 0; }
+
 /* ---------- KPI 세 질문 카드 ---------- */
 .kpi-cards {
   display: grid;
@@ -284,6 +305,10 @@ footer {
   .brand { display: none; }
   .columns { flex-direction: column; gap: 16px; }
   .kpi-cards { grid-template-columns: 1fr; }
+  .history-grid { grid-template-columns: 1fr; grid-template-rows: none; }
+  .hist-main, .hist-side, .hist-cert { grid-column: 1; grid-row: auto; }
+  .hist-side h3 { margin-top: 28px; }
+  .hist-awards { margin-top: 0; }
   .columns > .col { width: 100% !important; flex: none !important; }
   h1 { font-size: 26px; }
   h2 { font-size: 22px; }
