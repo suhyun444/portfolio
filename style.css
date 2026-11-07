@@ -246,6 +246,27 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
 /* ---------- tech stack ---------- */
 .stack .callout { height: 100%; }
 
+/* ---------- KPI 세 질문 카드 ---------- */
+.kpi-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0 0 20px;
+}
+.kpi-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border-top: 4px solid var(--accent);
+  padding: 20px 20px 18px;
+}
+.kpi-card:nth-child(2) { border-top-color: #8b5cf6; }
+.kpi-card:nth-child(3) { border-top-color: #10b981; }
+.kpi-card .q { display: block; font-size: 17px; line-height: 1.5; }
+.kpi-card .m { display: block; font-size: 13.5px; font-weight: 600; color: var(--accent); margin: 6px 0 12px; }
+.kpi-card:nth-child(2) .m { color: #7c3aed; }
+.kpi-card:nth-child(3) .m { color: #059669; }
+.kpi-card p { font-size: 15px; line-height: 1.7; color: var(--text-2); margin: 0; }
+
 /* ---------- footer ---------- */
 footer {
   border-top: 1px solid var(--border);
@@ -262,6 +283,7 @@ footer {
   .topnav-inner { padding: 0 16px; gap: 12px; }
   .brand { display: none; }
   .columns { flex-direction: column; gap: 16px; }
+  .kpi-cards { grid-template-columns: 1fr; }
   .columns > .col { width: 100% !important; flex: none !important; }
   h1 { font-size: 26px; }
   h2 { font-size: 22px; }
