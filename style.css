@@ -497,7 +497,11 @@ p.label b {
   h1 { font-size: 20pt; }
   .hero h2 { font-size: 16pt; }
   .hero .contact-title { margin-top: 16px; }
-  .hero-name { font-size: 20pt; margin-bottom: 14px; }
+  .hero-name { font-size: 18pt; margin-bottom: 10px; }
+  /* 1쪽에 프로필·이력·테크스택이 함께 들어가도록 간격 압축 */
+  hr { margin: 16px 0; }
+  #tech-stack h2 { margin-top: 0; font-size: 16pt; }
+  .hist-cert h3, .hist-awards h3 { margin-top: 18px; }
   #ai > h1, #projects > h1 { font-size: 22pt; padding-bottom: 8px; margin-bottom: 16px; }
   #projects .project-title { font-size: 18pt; margin-top: 0; }
   #ai h2, #projects h3 { font-size: 14pt; margin: 26px 0 10px; }
