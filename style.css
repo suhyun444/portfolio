@@ -306,7 +306,7 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
 
 /* ---------- 제목 위계 (AI 활용 역량 · 프로젝트 소개) ----------
    1단계  #ai > h1, #projects > h1 : 가장 크게, 굵은 밑줄
-   프로젝트 h2.project-title       : 위쪽 굵은 선
+   프로젝트 h2.project-title       : 크고 굵게 (선 없음)
    2단계  #ai h2, #projects h3     : 왼쪽 파란 막대 (강조색은 여기만)
    3단계  #ai h3, #projects h4     : 본문을 왼쪽 선(.subblock)으로 묶음
    4단계  .h-l4                    : 작게
@@ -317,11 +317,6 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
   padding-bottom: 14px;
   border-bottom: 2px solid var(--text);
   margin-bottom: 28px;
-}
-.project-title {
-  display: inline-block;
-  padding-top: 8px;
-  border-top: 3px solid var(--text);
 }
 #projects .project-title { font-size: 30px; font-weight: 800; margin-top: 48px; }
 #ai h2, #projects h3 {
