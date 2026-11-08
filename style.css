@@ -497,7 +497,9 @@ p.label b {
   /* 제목 크기 */
   h1 { font-size: 20pt; }
   .hero h2 { font-size: 16pt; }
-  .hero .contact-title { margin-top: 16px; }
+  .hero .contact-title { margin: 12px 0 4px; font-size: 12pt; }
+  .hero .col > ul { font-size: 9pt; }
+  .hero .col > ul li { margin: 1px 0; }
   .hero-name { font-size: 18pt; margin-bottom: 10px; }
   /* 1쪽에 프로필·이력·테크스택이 함께 들어가도록 간격 압축 */
   hr { margin: 16px 0; }
