@@ -8,6 +8,7 @@
   --text-3: #7a828e;
   --accent: #2f6fed;
   --accent-soft: #eaf1ff;
+  --accent-strong: #1d4fc4;
   --code-bg: #f3f4f6;
   --radius: 12px;
   --maxw: 1120px;
@@ -246,6 +247,72 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
 /* ---------- tech stack ---------- */
 .stack .callout { height: 100%; }
 
+/* ---------- 제목 위계 (AI 활용 역량 · 프로젝트 소개) ----------
+   1단계 h1  : 섹션 제목 (가장 크게, 밑줄)
+   프로젝트  : h2.project-title
+   2단계 h3  : 왼쪽 파란 막대
+   3단계 h4  : 본문 전체를 왼쪽 회색 선(.subblock)으로 묶음
+   4단계 h5  : .h-l4, 파란 네모 표시
+   라벨      : p.label (설계 배경 · 구조 · 장점)                     */
+#ai > h1, #projects > h1 {
+  font-size: 36px;
+  font-weight: 800;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--text);
+  margin-bottom: 28px;
+}
+#projects .project-title { font-size: 30px; font-weight: 800; margin-top: 48px; }
+#ai h3, #projects h3 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 64px 0 18px;
+  padding-left: 14px;
+  border-left: 5px solid var(--accent);
+}
+#ai h4, #projects h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0 0 14px;
+}
+.subblock {
+  margin: 32px 0 0;
+  padding: 2px 0 2px 22px;
+  border-left: 2px solid #cfd5dd;
+}
+.subblock + .subblock { margin-top: 48px; }
+.subblock > :last-child { margin-bottom: 0; }
+.h-l4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17.5px;
+  font-weight: 700;
+  color: var(--accent-strong);
+  margin: 32px 0 10px;
+}
+.h-l4::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.h-l4 b { font-weight: inherit; }
+p.label { margin: 20px 0 8px; }
+p.label b {
+  display: inline-block;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  padding: 1px 10px;
+  border-radius: 999px;
+}
+p.lead > b:first-child { color: var(--accent-strong); }
+
 /* ---------- 이력 · 업무경험 · 수상경력 · 자격증 ---------- */
 /* 왼쪽: 이력 → 자격증, 오른쪽: 업무경험 → 수상경력(아래 끝을 자격증과 맞춤) */
 .history-grid {
@@ -305,6 +372,12 @@ footer {
   .brand { display: none; }
   .columns { flex-direction: column; gap: 16px; }
   .kpi-cards { grid-template-columns: 1fr; }
+  #ai > h1, #projects > h1 { font-size: 28px; }
+  #projects .project-title { font-size: 25px; }
+  #ai h3, #projects h3 { font-size: 21px; margin-top: 48px; padding-left: 12px; border-left-width: 4px; }
+  #ai h4, #projects h4 { font-size: 18px; }
+  .subblock { padding-left: 14px; }
+  .h-l4 { font-size: 16.5px; }
   .history-grid { grid-template-columns: 1fr; grid-template-rows: none; }
   .hist-main, .hist-side, .hist-cert { grid-column: 1; grid-row: auto; }
   .hist-side h3 { margin-top: 28px; }
