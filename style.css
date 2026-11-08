@@ -539,8 +539,10 @@ p.label b {
   /* 페이지 폭을 넘지 않게: 한글 단어 줄바꿈 허용, 칸은 줄어들 수 있게 */
   .kpi-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .table-wrap { overflow: visible; }
-  table { table-layout: fixed; }
-  th, td { word-break: normal; overflow-wrap: anywhere; white-space: normal; }
+  /* 표: 웹처럼 내용에 맞춘 칸 너비 + 촘촘한 셀 (인쇄 전용) */
+  table { table-layout: auto; }
+  th, td { padding: 5px 9px; line-height: 1.5; word-break: keep-all; overflow-wrap: anywhere; }
+  th { white-space: nowrap; }
   .kpi-card, .bm-text { word-break: normal; }
 
   /* 새 페이지 바로 앞의 구분선은 숨김 (빈 페이지 방지) */
