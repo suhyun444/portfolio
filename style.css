@@ -304,6 +304,7 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
 .hero-photo { grid-area: photo; }
 .hero-text { grid-area: text; }
 .hero-text > :last-child { margin-bottom: 0; }
+#contact { margin-top: 28px; }
 #contact .contact-title { margin: 0 0 12px; }
 #contact ul { margin: 0; }
 .hero-sub { font-size: 15px; color: var(--text-2); margin: -4px 0 16px; }
