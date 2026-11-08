@@ -30,7 +30,7 @@
     <div class="col profile-col" style="flex: 25">
       <div class="callout media">
         <div class="callout-body">
-          <figure class="profile-img"><img src="images/profile.png" alt="정수현 프로필 사진"></figure>
+          <figure class="profile-img"><img src="images/profile.jpg" alt="정수현 프로필 사진"></figure>
         </div>
       </div>
     </div>
@@ -99,7 +99,6 @@
   <div class="columns stack">
     <div class="col" style="flex: 33">
       <div class="callout">
-        <div class="callout-icon">🖥️</div>
         <div class="callout-body">
           <p><b>Backend</b></p>
           <p>Java, Spring boot, MySQL, Redis</p>
@@ -108,7 +107,6 @@
     </div>
     <div class="col" style="flex: 33">
       <div class="callout">
-        <div class="callout-icon">🎮</div>
         <div class="callout-body">
           <p><b>Game · Client</b></p>
           <p>Unity, C++, C#</p>
@@ -117,7 +115,6 @@
     </div>
     <div class="col" style="flex: 34">
       <div class="callout">
-        <div class="callout-icon">🛠️</div>
         <div class="callout-body">
           <p><b>Infra · Tools</b></p>
           <p>AWS, Docker, Nginx, Claude Code, Codex</p>
@@ -137,7 +134,7 @@
 
   <p>작업 과정을 PR 요약 댓글로 남겨 과거에 왜 이런 결정을 했는지 돌아볼 수 있게 기록했습니다.</p>
 
-  <h3>작업 흐름</h3>
+  <h2>작업 흐름</h2>
   <ol>
     <li>작업을 정합니다. 이후 에이전트와 함께 이슈 단위로 작업을 정리하고 깃허브 이슈를 등록합니다.</li>
     <li>Claude Code에서 계획을 짭니다. 계획은 디렉토리 내에서 Markdown 파일로 관리해 여러 에이전트가 쉽게 접근할 수 있게 합니다.</li>
@@ -151,7 +148,7 @@
     <li>PR을 머지합니다. 변경 내용, 검증 결과, 리뷰 결정을 PR 요약 댓글로 남깁니다. 머지 후에는 PR에 연결된 이슈가 닫혔는지 확인합니다.</li>
   </ol>
 
-  <h3>프로젝트 설정</h3>
+  <h2>프로젝트 설정</h2>
 
   <p><b>공통 규칙:</b> <code>CLAUDE.md</code>는 <code>AGENTS.md</code>를 가리키고 <code>.claude/skills</code>는 <code>.agents/skills</code>를 참조해, 에이전트가 달라도 같은 규칙과 스킬을 씁니다.</p>
 
@@ -160,7 +157,7 @@
   <p><b>리뷰 검증:</b> 리뷰를 지시가 아니라 가설로 보고, 항목별로 타당성을 확인한 뒤 맞는 것만 반영하도록 스킬로 정리했습니다.</p>
 
   <div class="subblock">
-  <h4>knowledge: 필요한 지식만 읽게 하는 문서</h4>
+  <h3>knowledge: 필요한 지식만 읽게 하는 문서</h3>
 
   <p>코드에서 바로 드러나지 않는 현재 동작, 계약, 불변식, 운영 제약을 <code>.agents/knoledge/</code>에 문서로 정리해 관리합니다.<br>이 문서를 통해 과거에 왜 이런 결정을 했었는지 알 수 있고, 작업에 필요한 문서만 읽도록 하여서 에이전트의 코드 탐색 범위를 줄이도록 설계했습니다.</p>
 
@@ -182,7 +179,7 @@
   </div>
 
   <div class="subblock">
-  <h4>skills: 반복 절차를 표준화한 도구</h4>
+  <h3>skills: 반복 절차를 표준화한 도구</h3>
 
   <p>작업 흐름에 있는 절차들을 스킬로 만들어서 사용합니다. 개발 효율과 작업물의 결과 모두 좋아졌습니다.</p>
 
@@ -202,7 +199,7 @@
 
   </div>
 
-  <h3>트러블 슈팅</h3>
+  <h2>트러블 슈팅</h2>
 
   <p>에이전트로 여러차례 리뷰하는 만큼 나올 수 없거나 굉장히 마이너한 문제를 방지하느라 불필요한 비용을 지불하거나 구조가 망가지는 경우가 몇차례 있었습니다.</p>
 
@@ -236,15 +233,15 @@
     <h3>실행 화면</h3>
     <div class="columns">
       <div class="col" style="flex: 1">
-        <figure class="phone-shot"><a class="img-link" href="images/laimory-home.png" target="_blank"><img src="images/laimory-home.png" alt="라이모리 홈화면" loading="lazy"></a></figure>
+        <figure class="phone-shot"><a class="img-link" href="images/laimory-home.jpg" target="_blank"><img src="images/laimory-home.jpg" alt="라이모리 홈화면" loading="lazy"></a></figure>
         <p>홈화면입니다. 어떤 정보가 수집되어있는지 확인할 수 있고 정보를 선택, 제외할 수 있습니다.</p>
       </div>
       <div class="col" style="flex: 1">
-        <figure class="phone-shot"><a class="img-link" href="images/laimory-timeline.png" target="_blank"><img src="images/laimory-timeline.png" alt="라이모리 타임라인" loading="lazy"></a></figure>
+        <figure class="phone-shot"><a class="img-link" href="images/laimory-timeline.jpg" target="_blank"><img src="images/laimory-timeline.jpg" alt="라이모리 타임라인" loading="lazy"></a></figure>
         <p>타임라인입니다. AI의 결과물로 각 정보들의 맥락을 파악하고 모아서 이벤트의 형태로 만들어줍니다. 수정과 메모 입력이 가능합니다.</p>
       </div>
       <div class="col" style="flex: 1">
-        <figure class="phone-shot"><a class="img-link" href="images/laimory-calendar.png" target="_blank"><img src="images/laimory-calendar.png" alt="라이모리 캘린더뷰" loading="lazy"></a></figure>
+        <figure class="phone-shot"><a class="img-link" href="images/laimory-calendar.jpg" target="_blank"><img src="images/laimory-calendar.jpg" alt="라이모리 캘린더뷰" loading="lazy"></a></figure>
         <p>지난 기록들을 캘린더뷰로 볼 수 있습니다</p>
       </div>
     </div>
@@ -525,7 +522,7 @@
 
     <p>요청마다 transaction ID를 발급해 로그에 남기고 응답 헤더로 전달합니다. <br>요청마다 한 줄의 로그에 경로, 상태, 응답 시간, 에러 코드, 예외 유형을 남겨 문제를 빠르게 좁힐 수 있게 했습니다.<br>보안을 위해 인증 정보와 사생활 데이터가 담긴 요청 본문은 마스킹했습니다. </p>
 
-    <figure class="bordered"><a class="img-link" href="images/laimory-logging.png" target="_blank"><img src="images/laimory-logging.png" alt="Kibana 로그 조회 화면" loading="lazy"></a></figure>
+    <figure class="bordered"><a class="img-link" href="images/laimory-logging.jpg" target="_blank"><img src="images/laimory-logging.jpg" alt="Kibana 로그 조회 화면" loading="lazy"></a></figure>
 
     </div>
 
@@ -543,7 +540,7 @@
 
     <div class="columns">
       <div class="col" style="flex: 50">
-        <figure class="bordered"><a class="img-link" href="images/laimory-monitoring-1.png" target="_blank"><img src="images/laimory-monitoring-1.png" alt="Grafana 인프라 대시보드" loading="lazy"></a></figure>
+        <figure class="bordered"><a class="img-link" href="images/laimory-monitoring-1.jpg" target="_blank"><img src="images/laimory-monitoring-1.jpg" alt="Grafana 인프라 대시보드" loading="lazy"></a></figure>
       </div>
       <div class="col" style="flex: 50">
         <figure class="bordered"><a class="img-link" href="images/laimory-monitoring-2.png" target="_blank"><img src="images/laimory-monitoring-2.png" alt="Discord 경보 알림" loading="lazy"></a></figure>
@@ -572,7 +569,7 @@
   <section id="mirador">
     <h2 class="project-title">2. MIRADOR</h2>
 
-    <figure><img src="images/mirador-main.png" alt="MIRADOR" loading="lazy"></figure>
+    <figure><img src="images/mirador-main.jpg" alt="MIRADOR" loading="lazy"></figure>
 
     <a class="bookmark" href="https://store.steampowered.com/app/1991780/MIRADOR/?l=koreana" target="_blank" rel="noopener">https://store.steampowered.com/app/1991780/MIRADOR/?l=koreana</a>
 
