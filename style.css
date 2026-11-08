@@ -291,7 +291,8 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
 
 /* ---------- hero ---------- */
 .hero { margin-bottom: 0; }
-.hero h2 { margin-top: 8px; font-size: 28px; letter-spacing: -0.02em; }
+.hero h2 { margin-top: 8px; margin-bottom: 4px; font-size: 28px; letter-spacing: -0.02em; }
+.hero-sub { margin: 0 0 16px; }  /* 제목 바로 아래에 붙는 설명 */
 .hero .contact-title { margin-top: 40px; }
 .hero .callout.media { background: none; border: 0; padding: 0; }
 .profile-img img { width: 100%; border-radius: 8px; }
