@@ -134,6 +134,8 @@ pre.code-json {
   background: #1e1f22;
   border-color: #2b2d30;
   color: #bcbec4;
+  white-space: pre-wrap;   /* 폭이 좁을 때 가로 스크롤 대신 줄바꿈 */
+  word-break: keep-all;
 }
 pre.code-json code { color: #bcbec4; }
 .code-json .tok-k { color: #c77dbb; }               /* key (IntelliJ JSON property) */

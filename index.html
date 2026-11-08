@@ -551,7 +551,7 @@
     <p>클라이언트는 응답 코드가 음수면 실패로 보고, 서버가 보낸 <code>message</code>를 그대로 사용자에게 보여줍니다. 서버드리븐한 구조로 앱을 업데이트하지 않아도 서버에서 새 예외를 추가하거나 안내 문구를 바꿀 수 있습니다.</p>
 
     <div class="columns">
-      <div class="col" style="flex: 50">
+      <div class="col" style="flex: 40">
 <pre class="code-json"><code class="language-json"><span class="tok-c">// 성공시</span>
 <span class="tok-p">{</span>
   <span class="tok-k">"header"</span><span class="tok-p">:</span> <span class="tok-p">{</span>
@@ -563,12 +563,12 @@
   <span class="tok-p">}</span>
 <span class="tok-p">}</span></code></pre>
       </div>
-      <div class="col" style="flex: 50">
+      <div class="col" style="flex: 60">
 <pre class="code-json"><code class="language-json"><span class="tok-c">// 실패시</span>
 <span class="tok-p">{</span>
   <span class="tok-k">"header"</span><span class="tok-p">:</span> <span class="tok-p">{</span>
-    <span class="tok-k">"code"</span><span class="tok-p">:</span> <span class="tok-n">-1021</span><span class="tok-p">,</span>
-    <span class="tok-k">"message"</span><span class="tok-p">:</span> <span class="tok-s">"크레딧이 부족해요."</span>
+    <span class="tok-k">"code"</span><span class="tok-p">:</span> <span class="tok-n">-1014</span><span class="tok-p">,</span>
+    <span class="tok-k">"message"</span><span class="tok-p">:</span> <span class="tok-s">"타임라인 생성에 실패했어요. 잠시 후 다시 시도해 주세요."</span>
   <span class="tok-p">},</span>
   <span class="tok-k">"body"</span><span class="tok-p">:</span> <span class="tok-n tok-null">null</span>
 <span class="tok-p">}</span></code></pre>
