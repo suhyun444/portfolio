@@ -302,7 +302,41 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
   border-radius: 0;
   padding: 12px 0 0;
 }
-.stack .callout-body p:first-child { margin-bottom: 6px; }
+.stack .callout-body p:first-child { margin-bottom: 10px; }
+
+/* ---------- 기술 칩 (무채색 테두리, 로고 없음) ---------- */
+ul.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+.callout-body ul.chips, .tech-row ul.chips { margin: 0; }
+ul.chips li {
+  margin: 0;
+  padding: 2px 10px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* 라이모리 사용 기술: 역할별 줄 */
+.tech-groups { margin: 0 0 14px; border-bottom: 1px solid var(--border); }
+.tech-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+.tech-label { font-size: 14px; font-weight: 600; color: var(--text-2); padding-top: 3px; }
 
 /* ---------- 제목 위계 (AI 활용 역량 · 프로젝트 소개) ----------
    1단계  #ai > h1, #projects > h1 : 가장 크게, 굵은 밑줄
@@ -424,6 +458,7 @@ p.label b {
   .bm-text { padding: 12px 14px; }
   .bm-thumb { flex-basis: 30%; }
   .bm-desc { -webkit-line-clamp: 1; }
+  .tech-row { grid-template-columns: 1fr; gap: 6px; }
   #ai > h1, #projects > h1 { font-size: 28px; }
   #projects .project-title { font-size: 25px; }
   #ai h2, #projects h3 { font-size: 21px; margin-top: 48px; padding-left: 12px; }
