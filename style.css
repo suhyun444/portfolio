@@ -142,7 +142,7 @@ pre.code-json code { color: #bcbec4; }
 .code-json .tok-n { color: #2aacb8; }               /* number */
 .code-json .tok-null { color: #cf8e6d; }            /* null */
 .code-json .tok-p { color: #bcbec4; }               /* { } : , */
-.code-json .tok-c { color: #f2f3f5; font-weight: 600; } /* #성공시, ~~ : 잘 보이게 흰색 */
+.code-json .tok-c { color: #f2f3f5; }               /* // 성공시, ~~ : 잘 보이게 흰색 */
 
 /* ---------- columns (Notion columns → horizontal) ---------- */
 .columns {
