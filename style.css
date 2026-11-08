@@ -295,7 +295,7 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
 .hero .contact-title { margin-top: 40px; }
 .hero .callout.media { background: none; border: 0; padding: 0; }
 .profile-img img { width: 100%; border-radius: 8px; }
-.profile-name { margin: 12px 0 0; text-align: center; font-size: 18px; font-weight: 700; letter-spacing: 0.04em; }
+.profile-name { margin: 14px 0 0; text-align: left; font-size: 24px; font-weight: 800; letter-spacing: 0.02em; }
 
 /* ---------- tech stack: 상자 대신 위쪽 굵은 선 ---------- */
 .stack .callout {
@@ -493,7 +493,7 @@ p.label b {
   h1 { font-size: 20pt; }
   .hero h2 { font-size: 16pt; }
   .hero .contact-title { margin-top: 16px; }
-  .profile-name { font-size: 12pt; margin-top: 8px; }
+  .profile-name { font-size: 15pt; margin-top: 8px; }
   #ai > h1, #projects > h1 { font-size: 22pt; padding-bottom: 8px; margin-bottom: 16px; }
   #projects .project-title { font-size: 18pt; margin-top: 0; }
   #ai h2, #projects h3 { font-size: 14pt; margin: 26px 0 10px; }
