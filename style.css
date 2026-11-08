@@ -130,19 +130,19 @@ pre {
 }
 pre code { background: none; padding: 0; font-size: inherit; }
 
-/* JSON 응답 예시: 코드 에디터 다크 테마 (아래 ExceptionType 캡처와 같은 톤, 보라 없음) */
+/* JSON 응답 예시: IntelliJ 다크 테마 색 (아래 ExceptionType 캡처와 같은 테마) */
 pre.code-json {
   background: #1e1f22;
   border-color: #2b2d30;
   color: #bcbec4;
 }
 pre.code-json code { color: #bcbec4; }
-.code-json .tok-k { color: #56a8f5; }               /* key */
+.code-json .tok-k { color: #c77dbb; }               /* key (IntelliJ JSON property) */
 .code-json .tok-s { color: #6aab73; }               /* string */
 .code-json .tok-n { color: #2aacb8; }               /* number */
 .code-json .tok-null { color: #cf8e6d; }            /* null */
 .code-json .tok-p { color: #bcbec4; }               /* { } : , */
-.code-json .tok-c { color: #7a7e85; font-style: italic; } /* #성공시, ~~ */
+.code-json .tok-c { color: #f2f3f5; font-weight: 600; } /* #성공시, ~~ : 잘 보이게 흰색 */
 
 /* ---------- columns (Notion columns → horizontal) ---------- */
 .columns {
