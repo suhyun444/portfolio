@@ -293,37 +293,19 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
 .hero { margin-bottom: 0; }
 .hero h2 { margin-top: 8px; font-size: 28px; letter-spacing: -0.02em; }
 .hero .callout.media { background: none; border: 0; padding: 0; margin: 0; }
-/* 왼쪽: 사진, 오른쪽: 제목·소개 + Contact 한 줄 (휴대폰: 사진 → 소개 → Contact) */
+/* 왼쪽: 사진, 오른쪽: 제목·소개 (휴대폰: 사진 → 소개). Contact는 아래 별도 줄 */
 .hero-grid {
   display: grid;
   grid-template-columns: 25fr 75fr;
-  grid-template-areas:
-    "photo text"
-    "photo contact";
-  grid-template-rows: auto 1fr;
+  grid-template-areas: "photo text";
   column-gap: 32px;
   align-items: start;
 }
 .hero-photo { grid-area: photo; }
 .hero-text { grid-area: text; }
 .hero-text > :last-child { margin-bottom: 0; }
-.hero-contact {
-  grid-area: contact;
-  margin-top: 22px;
-  padding-top: 14px;
-  border-top: 1px solid var(--border);
-}
-.hero .contact-title { margin: 0 0 6px; font-size: 13px; font-weight: 600; color: var(--text-3); letter-spacing: .02em; }
-.hero-contact ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 24px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 14.5px;
-}
-.hero-contact li { margin: 0; }
+#contact .contact-title { margin: 0 0 12px; }
+#contact ul { margin: 0; }
 .hero-sub { font-size: 15px; color: var(--text-2); margin: -4px 0 16px; }
 .profile-img img { width: 100%; border-radius: 8px; }
 
@@ -487,12 +469,10 @@ p.label b {
   hr { margin: 40px 0; }
   .hero-grid {
     grid-template-columns: 1fr;
-    grid-template-areas: "photo" "text" "contact";
-    grid-template-rows: none;
+    grid-template-areas: "photo" "text";
     row-gap: 16px;
   }
   .hero-photo { max-width: 220px; }
-  .hero-contact { margin-top: 8px; }
   .phone-shot img { max-height: 480px; }
   .bookmark { min-height: 92px; }
   .bm-text { padding: 12px 14px; }
@@ -529,7 +509,7 @@ p.label b {
   /* 제목 크기 */
   h1 { font-size: 20pt; }
   .hero h2 { font-size: 16pt; }
-  .hero-sub, .hero-contact ul { font-size: 9.5pt; }
+  .hero-sub { font-size: 9.5pt; }
   #ai > h1, #projects > h1 { font-size: 22pt; padding-bottom: 8px; margin-bottom: 16px; }
   #projects .project-title { font-size: 18pt; margin-top: 0; }
   #ai h2, #projects h3 { font-size: 14pt; margin: 26px 0 10px; }
