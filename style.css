@@ -184,6 +184,7 @@ figure img, .img-link img {
   border-radius: 6px;
 }
 .img-link { display: block; border-radius: 6px; }
+.img-link-fit { width: fit-content; max-width: 100%; }  /* 이미지 크기만큼만 클릭 영역 */
 figure.bordered img { border: 1px solid var(--border); }
 figcaption { font-size: 14px; color: var(--text-3); margin-top: 6px; }
 .phone-shot .img-link { width: fit-content; margin: 0 auto 12px; }
