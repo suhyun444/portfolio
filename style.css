@@ -295,7 +295,10 @@ th { background: var(--surface); font-weight: 600; white-space: nowrap; }
 .hero .contact-title { margin-top: 40px; }
 .hero .callout.media { background: none; border: 0; padding: 0; }
 .profile-img img { width: 100%; border-radius: 8px; }
-.profile-name { margin: 14px 0 0; text-align: left; font-size: 24px; font-weight: 800; letter-spacing: 0.02em; }
+/* 맨 위 이름 줄: 사진·소개 두 칸보다 먼저 읽히도록 전체 폭 */
+.hero-name { margin: 0 0 24px; font-size: 32px; line-height: 1.3; letter-spacing: -0.01em; }
+.hero-name b { font-weight: 800; }
+.hero-name span { font-weight: 600; color: var(--text-3); }
 
 /* ---------- tech stack: 상자 대신 위쪽 굵은 선 ---------- */
 .stack .callout {
@@ -454,6 +457,7 @@ p.label b {
   h2 { font-size: 22px; }
   h3 { font-size: 18px; }
   .hero h2 { font-size: 22px; }
+  .hero-name { font-size: 26px; margin-bottom: 18px; }
   hr { margin: 40px 0; }
   .hero .profile-col { max-width: 220px; }
   .phone-shot img { max-height: 480px; }
@@ -493,7 +497,7 @@ p.label b {
   h1 { font-size: 20pt; }
   .hero h2 { font-size: 16pt; }
   .hero .contact-title { margin-top: 16px; }
-  .profile-name { font-size: 15pt; margin-top: 8px; }
+  .hero-name { font-size: 20pt; margin-bottom: 14px; }
   #ai > h1, #projects > h1 { font-size: 22pt; padding-bottom: 8px; margin-bottom: 16px; }
   #projects .project-title { font-size: 18pt; margin-top: 0; }
   #ai h2, #projects h3 { font-size: 14pt; margin: 26px 0 10px; }
