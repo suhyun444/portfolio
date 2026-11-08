@@ -130,6 +130,14 @@ pre {
 }
 pre code { background: none; padding: 0; font-size: inherit; }
 
+/* JSON 응답 예시: 문법 색 (밝은 바탕용, 보라 없음) */
+pre.code-json { background: #fbfaf7; }
+.code-json .tok-k { color: #1f4bb0; }               /* key */
+.code-json .tok-s { color: #0f766e; }               /* string */
+.code-json .tok-n { color: #b45309; }               /* number, null */
+.code-json .tok-p { color: #857e74; }               /* { } : , */
+.code-json .tok-c { color: #9a948a; font-style: italic; } /* #성공시, ~~ */
+
 /* ---------- columns (Notion columns → horizontal) ---------- */
 .columns {
   display: flex;
