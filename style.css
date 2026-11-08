@@ -166,11 +166,11 @@ pre.code-json code { color: #bcbec4; }
 }
 .callout-body { min-width: 0; flex: 1; }
 .callout-body > :last-child { margin-bottom: 0; }
-/* 이미지가 든 칸: 회색 상자 대신 흰 바탕 + 얇은 테두리 */
+/* 이미지가 든 칸: 상자·테두리 없이 이미지만 */
 .callout.media {
-  background: var(--paper);
-  border: 1px solid var(--border);
-  padding: 12px;
+  background: none;
+  border: 0;
+  padding: 0;
 }
 .callout.media figure { margin: 0; }
 
@@ -182,9 +182,7 @@ figure img, .img-link img {
   height: auto;
   border-radius: 6px;
 }
-.img-link { display: block; overflow: hidden; border-radius: 6px; }
-.img-link img { transition: transform .25s ease; }
-.img-link:hover img { transform: scale(1.015); }
+.img-link { display: block; border-radius: 6px; }
 figure.bordered img { border: 1px solid var(--border); }
 figcaption { font-size: 14px; color: var(--text-3); margin-top: 6px; }
 .phone-shot .img-link { width: fit-content; margin: 0 auto 12px; }
