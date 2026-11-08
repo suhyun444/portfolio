@@ -764,6 +764,11 @@
     window.addEventListener('scroll', update, { passive: true });
     update();
   })();
+
+  // 인쇄(PDF 저장) 전에 아직 안 불러온 이미지까지 모두 불러오기
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+  });
 </script>
 </body>
 </html>

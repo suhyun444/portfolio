@@ -439,7 +439,7 @@ p.label b {
 .kpi-card p { font-size: 15px; line-height: 1.7; color: var(--text-2); margin: 0; }
 
 /* ---------- mobile ---------- */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   body { font-size: 15.5px; }
   main { padding: 24px 16px 72px; }
   .topnav-inner { padding: 0 16px; gap: 12px; }
@@ -469,4 +469,66 @@ p.label b {
   .hist-main, .hist-side, .hist-cert { grid-column: 1; grid-row: auto; }
   .hist-side h3 { margin-top: 28px; }
   .hist-awards { margin-top: 0; }
+}
+
+/* ---------- 인쇄 / PDF (화면 모습에는 영향 없음) ---------- */
+@page { size: A4; margin: 14mm 12mm; }
+@media print {
+  html { scroll-padding-top: 0; }
+  body {
+    background: #fff;
+    font-size: 10pt;
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .topnav { display: none; }
+  main { max-width: none; padding: 0 3px 0 0; }
+  hr { margin: 22px 0; }
+
+  /* 제목 크기 */
+  h1 { font-size: 20pt; }
+  .hero h2 { font-size: 16pt; }
+  #ai > h1, #projects > h1 { font-size: 22pt; padding-bottom: 8px; margin-bottom: 16px; }
+  #projects .project-title { font-size: 18pt; margin-top: 0; }
+  #ai h2, #projects h3 { font-size: 14pt; margin: 26px 0 10px; }
+  #ai h3, #projects h4 { font-size: 12pt; }
+  .h-l4 { font-size: 11pt; margin-top: 18px; }
+  .subblock { margin-top: 18px; }
+  .subblock + .subblock { margin-top: 24px; }
+
+  /* 큰 덩어리는 새 페이지에서 시작 */
+  #ai, #projects, #mirador { break-before: page; }
+
+  /* 페이지 중간에서 잘리지 않게 */
+  figure, .bookmark, .callout, .kpi-card, .kpi-cards, pre, table, tr,
+  .tech-row, .meta, .columns, .history-grid, ul.chips, li {
+    break-inside: avoid;
+  }
+  h1, h2, h3, h4, h5, p.label, p.lead { break-after: avoid; }
+
+  /* 이미지 크기 */
+  figure img, .img-link img { max-height: 230mm; width: auto !important; max-width: 100% !important; }
+  .phone-shot img { max-height: 95mm; }
+  .profile-img img { max-height: 70mm; object-fit: cover; }
+
+  /* 링크 카드: 인쇄에서는 조금 낮게 */
+  .bookmark { min-height: 0; }
+  .bm-thumb { max-width: 150px; }
+
+  pre { font-size: 8.5pt; }
+  table { font-size: 9pt; }
+
+  /* 페이지 폭을 넘지 않게: 한글 단어 줄바꿈 허용, 칸은 줄어들 수 있게 */
+  .kpi-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .table-wrap { overflow: visible; }
+  table { table-layout: fixed; }
+  th, td { word-break: normal; overflow-wrap: anywhere; white-space: normal; }
+  .kpi-card, .bm-text { word-break: normal; }
+
+  /* 새 페이지 바로 앞의 구분선은 숨김 (빈 페이지 방지) */
+  hr:has(+ #ai), hr:has(+ #projects), hr:has(+ #mirador) { display: none; }
+
+  /* 세로로 긴 그림이 다음 페이지로 밀려 큰 빈칸이 생기지 않게 */
+  figure img, .img-link img { max-height: 175mm; }
 }
