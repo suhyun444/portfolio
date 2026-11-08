@@ -34,6 +34,13 @@ body {
 
 a { color: var(--accent); text-decoration: none; text-underline-offset: 3px; }
 a:hover { text-decoration: underline; }
+/* 문장 안에서 눈에 띄어야 하는 링크: 굵게 + 밑줄 */
+a.inline-strong {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
 
 /* ---------- top nav ---------- */
 .topnav {
