@@ -386,7 +386,7 @@
 
     <p>Subject ID 조회 흐름: userId → HMAC-SHA-256 조회 키 생성 → 매핑 테이블 조회 → Subject ID 획득 → 콘텐츠 접근</p>
 
-    <figure><a class="img-link" href="images/laimory-subject-id-flow.webp" target="_blank"><img src="images/laimory-subject-id-flow.webp" alt="Subject ID 조회 흐름" loading="lazy"></a></figure>
+    <figure><a class="img-link" href="images/laimory-subject-id-flow.png" target="_blank"><img src="images/laimory-subject-id-flow.png" alt="Subject ID 조회 흐름" loading="lazy"></a></figure>
 
     <p>조회 키는 userId를 비밀키로 HMAC-SHA-256 변환한 값입니다. userId는 순서대로 발급되는 번호라 일반 해시를 쓰면 모든 번호를 대입해 원래 값을 찾아낼 수 있기 때문에, 비밀키 없이는 같은 값을 만들 수 없도록 했습니다. 매핑 테이블에는 원본 userId 없이 조회 키, Subject ID, 키 버전만 저장하고, 비밀키는 AWS Secrets Manager에서 따로 관리합니다.</p>
 
